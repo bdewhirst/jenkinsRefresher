@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 
-        stage('Checkout Codebase-- note: calling this file 'Jenkinsfile' is not arbitrary, it is recommended/required') {
+        stage('Checkout Codebase-- note: calling this file 'Jenkinsfile' is not arbitrary, and is specified over in Jenkins') {
             steps {
             checkout scm: [$class: 'GitSCM',
             userRemoteConfigs: [[credentialsId: 'jenkins-side-ssh-key-we-set-up',url: 'git@github.com:mnorm88/multithreading-example-1.git']]]
